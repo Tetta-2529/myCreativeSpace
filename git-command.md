@@ -66,7 +66,7 @@
 
 ## git push origin master
 
-- originというリモートリポジトリのmasterというブランチにローカルリポジトリの変更を反映する
+- origin というリモートリポジトリの master というブランチにローカルリポジトリの変更を反映する
 
 ## git fetch ＜リモートリポジトリ名＞
 
