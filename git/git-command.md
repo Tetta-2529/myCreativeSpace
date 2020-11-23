@@ -6,49 +6,57 @@
 
 - 変更があるファイルがあるかどうか、変更状況を確認する
 
-## git clone ＜ URL ＞
+## ls
 
-- 指定した URL の GitHub からデータを複製する
+- 現在のディレクトリに格納されているファイル一覧を表示（隠しファイルも含めて表示する場合は -a を追記して実行する）
 
-## git add
+## git clone https:~.git
 
-- ステージに追加する
+- 指定した URL のリモートリポジトリの内容を複製する
 
-## git commit
+## git add index.html
 
-- ステージに追加したファイルをコミットする
+- index.html ファイルをステージに追加する
 
 ## git diff
 
-- ステージに追加する前のファイルの変更差分を確認する
+- ステージに追加__する前の__ファイルの変更差分を確認する
+
+## git commit index.html
+
+- ステージに追加した index.html ファイルをコミット（リモートリポジトリへ反映する準備）する
+
+## git diff --staged
+
+- ステージに追加__した後の__ファイルの変更差分を確認する
 
 ## git log
 
-- 変更履歴を表示する
+- 変更履歴を全て表示する
 
-## git log --oneline --decorate
+## git log --oneline
 
 - 変更履歴を各一行で表示
 
-## git rm ＜ファイル名＞
+## git rm index.html
 
-- ファイルを削除する
+- index.html ファイルをローカルリポジトリも併せて削除する
 
-## git rm -r ＜ディレクトリ名＞
+## git rm -r hoge
 
-- ディレクトリを削除する
+- hoge ディレクトリを削除する
 
-## git rm --cached ＜ファイル名＞
+## git rm --cached index.html
 
-- ファイルをローカルリポジトリのみ削除する
+- index.html ファイルをローカルリポジトリのみ削除する
 
-## git checkout -- ＜ファイル名＞
+## git checkout -- index.html
 
-- ステージに追加する前のファイルの変更を取り消す
+- ステージに追加する前の index.html ファイルの変更を取り消す
 
-## git reset HEAD ＜ファイル名＞
+## git reset HEAD index.html
 
-- ステージへの追加を取り消す
+- ステージに追加した index.html ファイルをステージから降ろす
 
 ＃リモートリポジトリへのアクション
 
@@ -60,9 +68,9 @@
 
 - リモートの対応する URL を表示
 
-## git remote add ＜リモートリポジトリ名＞ ＜リモートリポジトリ URL ＞
+## git remote add origin https:~.git
 
-- 対応のリモートリポジトリ（URL）を任意の名前（リモート名）で GitHub にアップしたり取得できるように登録する
+- GitHub に登録されているリモートリポジトリ（URL）に origin という名前で GitHub にアップしたり取得できるように紐づけ登録する（基本的に初回のみ使用）
 
 ## git push origin master
 
