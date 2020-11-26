@@ -12,11 +12,11 @@
 
 ## git clone https:~.git
 
-- 指定した URL のリモートリポジトリの内容を複製する
+- 指定したURLのリモートリポジトリの内容を複製する
 
 ## git add index.html
 
-- index.html ファイルをステージに追加する
+- "indexhtml"ファイルをステージに追加する
 
 ## git diff
 
@@ -24,7 +24,7 @@
 
 ## git commit index.html
 
-- ステージに追加した index.html ファイルをコミット（リモートリポジトリへ反映する準備）する
+- ステージに追加した "index.html"ファイルをコミット（リモートリポジトリへ反映する準備）する
 
 ## git diff --staged
 
@@ -40,23 +40,23 @@
 
 ## git rm index.html
 
-- index.html ファイルをローカルリポジトリも併せて削除する
+- "index.html"ファイルをローカルリポジトリも併せて削除する
 
 ## git rm -r hoge
 
-- hoge ディレクトリを削除する
+- "hoge"ディレクトリを削除する
 
 ## git rm --cached index.html
 
-- index.html ファイルをローカルリポジトリのみ削除する
+- "index.html"ファイルをローカルリポジトリのみ削除する
 
 ## git checkout -- index.html
 
-- ステージに追加する前の index.html ファイルの変更を取り消す
+- ステージに追加する前の"index.html"ファイルの変更を取り消す
 
 ## git reset HEAD index.html
 
-- ステージに追加した index.html ファイルをステージから降ろす
+- ステージに追加した"index.html"ファイルをステージから降ろす
 
 ＃リモートリポジトリへのアクション
 
@@ -66,29 +66,31 @@
 
 ## git remote -v
 
-- リモートの対応する URL を表示
+- リモートの対応するURLを表示
 
 ## git remote add origin https:~.git
 
-- GitHub に登録されているリモートリポジトリ（URL）に origin という名前で GitHub にアップしたり取得できるように紐づけ登録する（基本的に初回のみ使用）
+- GitHubに登録されているリモートリポジトリ（URL）に"origin"という名前でGitHubにアップしたり取得できるように紐づけ登録する（基本的に初回のみ使用）
 
 ## git push origin master
 
-- origin というリモートリポジトリの master というブランチにローカルリポジトリの変更を反映する
+- "origin"というリモートリポジトリの"master"というブランチにローカルリポジトリの変更を反映する
 
 ## git fetch origin
 
-- origin リモートリポジトリの内容をローカルリポジトリに取得してくる（取得するだけでマージはまだされていない）
-- fetch して取得した origin リモートリポジトリの内容を確認する場合は git checkout remotes/origin/master で切り替える
-- 問題なければ作業しているブランチに戻って git merge origin/master でマージする（fetch で取得したリモートリポジトリ remotes/origin/master をマージ）
+- 2origin"リモートリポジトリの内容をローカルリポジトリ（remotes/origin/master）に取得してくる（取得するだけでマージはまだされていない）
+- "fetch"して取得した"origin"リモートリポジトリの内容を確認する場合は "git checkout remotes/origin/master" で切り替える
+- 問題なければ作業しているブランチに戻って "git merge origin/master" でマージする（"fetch"で取得したリモートリポジトリ "remotes/origin/master" をマージ）
 
 ## git merge ＜ローカルリポジトリ名/ブランチ名＞
 
 - リモートリポジトリから取得してきた内容をローカルリポジトリとマージする
 
-## git pull ＜リモートリポジトリ名＞ ＜ブランチ名＞
+## git pull origin master
 
-- リモートリポジトリの内容をローカルリポジトリに取得し、自動でマージまで行う
+- "origin"リモートリポジトリの"master"ブランチの内容をローカルリポジトリに取得し、自動でマージまで行う
+- ローカルの作業ブランチが取得したリモートリポジトリのブランチが異なると意図しない反映が行われてしまう
+- 例．リモート："hoge"ブランチ、ローカル："master"ブランチの場合、git pullすると"hoge"ブランチの内容がローカルの"hoge"ブランチではなく"master"ブランチに反映される
 
 ## git branch
 
