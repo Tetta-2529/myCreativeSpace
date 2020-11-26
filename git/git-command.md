@@ -76,9 +76,11 @@
 
 - origin というリモートリポジトリの master というブランチにローカルリポジトリの変更を反映する
 
-## git fetch ＜リモートリポジトリ名＞
+## git fetch origin
 
-- リモートリポジトリの内容をローカルリポジトリに取得してくる（取得するだけでマージはまだされていない）
+- origin リモートリポジトリの内容をローカルリポジトリに取得してくる（取得するだけでマージはまだされていない）
+- fetch して取得した origin リモートリポジトリの内容を確認する場合は git checkout remotes/origin/master で切り替える
+- 問題なければ作業しているブランチに戻って git merge origin/master でマージする（fetch で取得したリモートリポジトリ remotes/origin/master をマージ）
 
 ## git merge ＜ローカルリポジトリ名/ブランチ名＞
 
@@ -91,6 +93,10 @@
 ## git branch
 
 - ブランチの一覧を表示する
+
+## git branch -a
+
+- リモートリポジトリの情報を含めたブランチの一覧を表示する
 
 ## git branch ＜ブランチ名＞
 
