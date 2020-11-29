@@ -76,6 +76,12 @@
 
 - "origin"リモートリポジトリの詳細を表示する
 - "git push"するとリモートリポジトリのどのブランチに反映されるかも表示される
+- 現在利用されている、存在しているブランチは"tracked"、削除されているブランチは"stale"と表示される
+
+### git remote prune origin
+
+- "git remote show origin"で"stale"と表示されているブランチを一斉削除する
+- 事前確認したい場合は"--dry-run"を追記して実行する（最終行に削除されるブランチが表示される）
 
 ### git push origin master
 
