@@ -1,0 +1,78 @@
+html {
+  font-family: 'Teko', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  height: 150vh;
+  background-color: teal;
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+}
+
+.container:nth-child(2) {
+  background-color: tomato;
+}
+
+.container:nth-child(3) {
+  background-color: violet;
+}
+
+.container .animate-title,
+.container .animate-title2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.container .animate-title.inview,
+.container .animate-title2.inview {
+  opacity: 1;
+}
+
+.container .animate-title.inview .char,
+.container .animate-title2.inview .char {
+  display: inline-block;
+  background-color: #333;
+}
+
+.container .animate-title .char,
+.container .animate-title2 .char {
+  opacity: 0;
+}
+
+@-webkit-keyframes animate-title {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes animate-title {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
