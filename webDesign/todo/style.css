@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  background-color: #333;
+}
+
+.todo-frame {
+  color: #fff;
+  padding: 30px;
+}
+
+#incomplete-todo,
+.add-todo,
+#complete-todo {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#incomplete-todo li,
+.add-todo li,
+#complete-todo li {
+  margin-top: 3px;
+}
+
+#incomplete-todo input,
+.add-todo input,
+#complete-todo input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+#incomplete-todo input:checked + label,
+.add-todo input:checked + label,
+#complete-todo input:checked + label {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+#incomplete-todo label,
+.add-todo label,
+#complete-todo label {
+  margin-left: 5px;
+  font-size: 0.8em;
+  letter-spacing: 0.03em;
+}
+
+.incomplete-todo-frame {
+  border: 1px solid #fff;
+  padding: 10px 15px;
+}
+
+.add-todo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3px;
+}
+
+.add-todo button {
+  border: none;
+  color: #aaa;
+  font-size: 1.2em;
+  background-color: transparent;
+}
+
+.add-todo input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+.add-todo input::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+.add-todo input:-ms-input-placeholder {
+  color: #aaa;
+}
+
+.add-todo input::-ms-input-placeholder {
+  color: #aaa;
+}
+
+.add-todo input::placeholder {
+  color: #aaa;
+}
+
+#complete-todo {
+  padding: 10px 15px;
+  border: 1px solid #fff;
+}
+/*# sourceMappingURL=style.css.map */

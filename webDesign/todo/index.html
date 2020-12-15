@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="todo-frame">
+      <div class="incomplete-todo-frame">
+        <ul id="incomplete-todo">
+          <li>
+            <input type="checkbox" id="incomplete-check1" />
+            <label for="incomplete-check1">TODO1</label>
+          </li>
+          <li>
+            <input type="checkbox" id="incomplete-check2" />
+            <label for="incomplete-check2">TODO2</label>
+          </li>
+        </ul>
+        <div class="add-todo">
+          <button id="add-new-todo">+</button>
+          <input
+            type="text"
+            placeholder="リストアイテム"
+            name="add-todo-btn"
+            id="value-new-todo"
+          />
+        </div>
+      </div>
+      <ul id="complete-todo"></ul>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
