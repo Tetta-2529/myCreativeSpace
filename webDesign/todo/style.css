@@ -3,9 +3,23 @@ body {
   background-color: #333;
 }
 
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1em;
+}
+
 .todo-frame {
-  color: #fff;
+  width: 500px;
   padding: 30px;
+  color: #fff;
 }
 
 #incomplete-todo,
@@ -45,7 +59,8 @@ body {
   letter-spacing: 0.03em;
 }
 
-.incomplete-todo-frame {
+.incomplete-todo-frame,
+.complete-todo-frame {
   border: 1px solid #fff;
   padding: 10px 15px;
 }
@@ -85,10 +100,5 @@ body {
 
 .add-todo input::placeholder {
   color: #aaa;
-}
-
-#complete-todo {
-  padding: 10px 15px;
-  border: 1px solid #fff;
 }
 /*# sourceMappingURL=style.css.map */
