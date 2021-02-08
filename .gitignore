@@ -1,2 +1,3 @@
 git-command.md
-.code-workspace
+*.code-workspace
+*.md
