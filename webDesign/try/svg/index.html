@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <svg width="160" height="160">
+    <defs>
+      <style>
+        .my-box {
+          fill: pink;
+          cursor: pointer;
+          transition: .3s;
+        }
+
+        .my-box:hover {
+          width: 60px;
+          height: 60px;
+        }
+      </style>
+    </defs>
+    <rect x="0" y="0" width="160" height="160" fill="skyblue" />
+    <rect x="20" y="20" width="30" height="30" style="fill:#08c; stroke:#eee;stroke-width:3;" />
+    <rect x="65" y="20" width="30" height="30" class="my-box" />
+  </svg>
+</body>
+</html>
