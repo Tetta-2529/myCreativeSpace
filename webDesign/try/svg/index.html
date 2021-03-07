@@ -10,10 +10,26 @@
       font-size: 72px;
       font-weight: bold;
       font-family: Arial;
-      /* fill: #fff; */
-      fill: none;
+      fill: #fff;
       stroke: #fff;
-      text-anchor: middle;
+      animation: text-move 3s ease-out;
+      stroke-dasharray: 300;
+    }
+
+    @keyframes text-move {
+      0% {
+        fill: none;
+        stroke-dashoffset: 300;
+      }
+
+      90% {
+        fill: skyblue;
+      }
+
+      100% {
+        fill: #fff;
+        stroke-dashoffset: 0;
+      }
     }
   </style>
 </head>
@@ -22,7 +38,7 @@
     <defs>
     </defs>
     <rect x="0" y="0" width="160" height="160" fill="skyblue" />
-    <text x="80" y="150" class="my-text">Hi</text>
+    <text x="5" y="150" class="my-text">Hi</text>
   </svg>
 </body>
 </html>
