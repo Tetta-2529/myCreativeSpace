@@ -4,7 +4,9 @@
   const target = document.querySelector('img');
 
   const options = {
-    threshold: [0.2, 0, 0, 0],
+    root: null, // 監視対象の領域の指定
+    rootMargin: '0px 0px -100px', // rootの領域サイズの指定
+    threshold: 1,
   }
 
   function callback(entries) {
