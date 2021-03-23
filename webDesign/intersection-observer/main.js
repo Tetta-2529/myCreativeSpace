@@ -4,24 +4,18 @@
   const target = document.querySelector('img');
 
   const options = {
-    root: null, // 監視対象の領域の指定
-    rootMargin: '0px 0px -100px', // rootの領域サイズの指定
-    threshold: 1,
+    threshold: 0.2,
   }
 
-  function callback(entries) {
+  function callback(entries, obs) {
     console.log(entries[0]);
 
-    // if (!entries[0].isIntersecting) {
-    //   return;
-    // }
-    // entries[0].target.classList.add('appear');
-
-    if (entries[0].isIntersecting) {
-      entries[0].target.classList.add('appear');
-    } else {
-      entries[0].target.classList.remove('appear');
+    if (!entries[0].isIntersecting) {
+      return;
     }
+    entries[0].target.classList.add('appear');
+    obs.unobserve(entries[0].target);
+    // 監視を止めることでブラウザにかかる負荷を軽減する
   }
 
   const observer = new IntersectionObserver(callback, options);
