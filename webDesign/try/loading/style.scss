@@ -1,69 +1,51 @@
-@import '../../css/foundation/mixin';
-
-img {
-  width: 100%;
-}
-
 .loading {
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: 0.3s 3s;
 
   &.hide {
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
-    transition: opacity 1.5s;
   }
 
-  & .circle {
-    display: block;
+  &-icon {
     position: relative;
-    top: calc(50% - 20px);
-    width: 40px;
-    height: 40px;
-    margin: 0 auto;
-    border-radius: 50%;
-    @include animation($name:load, $duration:0.5s, $timing-function:steps(8, start), $iteration-count:infinite, $fill-mode:forwards);
+    animation-name: loading-animation;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(8, start);
+    animation-iteration-count: infinite;
 
-    @keyframes load {
+
+    @keyframes loading-animation {
       to {
         transform: rotate(360deg);
       }
     }
 
-    & span {
+    & div {
       position: absolute;
-      top: calc(50% - 5px);
-      left: 50%;
+      top: calc(50% - 8px);
+      left: calc(50% - 8px);
       display: block;
-      width: 20px;
-      height: 10px;
-      transform-origin: left;
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: calc(50% - 5px);
-        left: 20px;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #fff;
-      }
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      border-radius: 50%;
 
       @for $i from 1 through 8 {
         &:nth-of-type(#{$i}) {
-          transform: rotate(45deg * $i);
-
-          &::after {
-            opacity: 1 - 0.125 * $i;
-          }
+          transform: rotate(45 * $i + deg) translateX(30px);
+          opacity: 0.125 * $i;
         }
       }
     }
   }
+
 }
